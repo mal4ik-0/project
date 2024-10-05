@@ -13,7 +13,6 @@ function Nav() {
                 <NavLink to="portfolios" activeClassName="active">Portfolios</NavLink>
                 <NavLink to="community" activeClassName="active">Community</NavLink>
                 <NavLink to="aboutUs" activeClassName="active">About Us</NavLink>
-                <NavLink to="contactUs" activeClassName="active">Contact Us</NavLink>
 
                 <div className="buttons">
                     <button className="signup">Sign in</button>
