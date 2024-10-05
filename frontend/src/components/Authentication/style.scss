@@ -1,0 +1,104 @@
+@import "../../assets/styles/_setting.scss";
+
+.auth-wrapper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $background-dark;
+    color: $light;
+
+    .form-wrapper {
+        background-color: rgba(255, 255, 255, 0.05); 
+        padding: 40px;
+        border-radius: 12px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+
+        header {
+            text-align: left;
+            margin-bottom: 20px;
+
+            h2 {
+                color: $light;
+                font-size: 24px;
+                margin-bottom: 5px;
+            }
+
+            p {
+                color: $gray;
+                font-size: 14px;
+            }
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+
+            input {
+                width: 100%;
+                padding: 15px;
+                background-color: #222;
+                border: none;
+                border-radius: 8px;
+                color: $light;
+                font-size: 16px;
+                transition: background-color 0.3s;
+
+                &:focus {
+                    background-color: #333;
+                }
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+                background-color: $violet;
+                border: none;
+                border-radius: 8px;
+                color: $light;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: lighten($violet, 10%);
+                }
+            }
+
+            .forgot-password {
+                text-align: right;
+                color: $violet;
+                font-size: 12px;
+                cursor: pointer;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+
+        .auth-toggler-container {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: $gray;
+
+            button {
+                background: none;
+                border: none;
+                color: $violet;
+                font-weight: 500;
+                cursor: pointer;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+
+
