@@ -8,11 +8,13 @@ function Nav() {
     return (
         <nav>
             <div className="links">
-                <NavLink to="/" activeclassname="active"><img src={IMG} alt="" /></NavLink>
-                <NavLink to="home" activeclassname="active">Home</NavLink>
-                <NavLink to="portfolios" activeclassname="active">Portfolios</NavLink>
-                <NavLink to="community" activeclassname="active">Community</NavLink>
-                <NavLink to="aboutUs" activeclassname="active">About Us</NavLink>
+                <NavLink to="/" activeClassName="active"><img src={IMG} alt="" /></NavLink>
+                <NavLink to="/" activeClassName="active">Home</NavLink>
+                <NavLink to="portfolios" activeClassName="active">Portfolios</NavLink>
+                <NavLink to="community" activeClassName="active">Community</NavLink>
+                <NavLink to="aboutUs" activeClassName="active">About Us</NavLink>
+                <NavLink to="contactUs" activeClassName="active">Contact Us</NavLink>
+
                 <div className="buttons">
                     <button className="signup">Sign in</button>
                     <button className="login">Sign up</button>

@@ -54,4 +54,4 @@ function TopRating() {
     )
 }
 
-export default TopRating
+export default TopRating;

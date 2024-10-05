@@ -12,7 +12,7 @@ function Home() {
             <Introduction />
             <TopRating />
             <SetUp />
-            <RecentUsers /> {}
+            <RecentUsers /> 
             <Footer />
         </div>
     );
