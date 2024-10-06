@@ -4,161 +4,111 @@
     display: flex;
     flex-direction: column;
     padding: 40px;
-    background-color: $background-dark; // Темный фон
-    color: $light; // Светлый текст
-    border-radius: 10px;
+    background-color: $background-dark;
+    color: $light;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
 
-.info-contact-section {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    
-}
+    .section {
+        margin-bottom: 40px;
+    }
 
-.info-about {
-    flex: 1;
-    margin-right: 20px;
+    h2 {
+        color: $violet;
+        margin-bottom: 15px;
+    }
 
     p {
-        font-size: 20px;
-        font-weight: 700;
-    }
-
-    .text2,
-    .text3 {
-        color: $gray;
-        font-size: 14px;
-    }
-}
-
-.contact-way {
-    flex: 1;
-}
-
-h2 {
-    color: $violet; // Яркий цвет для заголовков
-    margin-bottom: 10px;
-}
-
-p {
-    line-height: 1.6;
-}
-
-.ball-container {
-    display: flex;
-    margin-top: 20px;
-
-    .ball {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        margin-right: 10px;
-    }
-
-    .violet-ball {
-        background-color: $violet;
-    }
-
-    .pink-ball {
-        background-color: pink;
-    }
-
-    .blue-ball {
-        background-color: #00aaff;
-    }
-}
-
-.contact-items {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-
-    .contact-item {
-        display: flex;
-        align-items: center;
+        line-height: 1.6;
+        color: $light;
         margin-bottom: 15px;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: rgba(255, 255, 255, 0.1); // Полупрозрачный фон
-        color: $light;
+    }
 
-        .circle {
-            font-size: 30px;
-            margin-right: 10px;
-            color: $violet; // Цвет для иконок
+    .contact-way {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        .contact-item {
+            display: flex;
+            align-items: center;
+
+            .icon {
+                font-size: 24px;
+                color: $violet;
+                margin-right: 10px;
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                margin-right: 5px;
+                margin-bottom: 0;
+
+            }
+
+            a {
+                background: $blue-gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
         }
     }
-}
 
-.form-and-image {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
 
-.form-wrapper {
-    margin-right: 20px;
-    width: 47%;
-    background-color: rgba(255, 255, 255, 0.2); // Полупрозрачный фон для формы
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-control {
-    margin-bottom: 20px;
-    @include flex(column, flex-start, flex-start);
-
-    input,
-    textarea {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.4);
+    .form-wrapper {
         background-color: rgba(255, 255, 255, 0.1);
-        color: $light; // Светлый текст
-        transition: border 0.3s;
-
-        &:focus {
-            outline: none;
-            border-color: $violet; // Цвет акцента на фокусе
-        }
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-        background-color: $violet; // Цвет кнопки
-        color: $light;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-
-        &:hover {
-            background-color: darken($violet, 10%);
-        }
-
-        &:disabled {
-            background-color: grey; // Цвет кнопки при отключении
-            cursor: not-allowed;
-        }
-    }
-}
-
-.image-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        max-width: 100%;
+        padding: 30px;
         border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        margin-top: 150px;
-        transform: scale(3);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: $light;
+            transition: border 0.3s;
+
+            &:focus {
+                outline: none;
+                border-color: $violet;
+            }
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            color: $light;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: darken($violet, 10%);
+            }
+
+            &:disabled {
+                background: $gray;
+                cursor: not-allowed;
+                transform: scale(0.85);
+            }
+        }
+    }
+
+    .image-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
     }
 }

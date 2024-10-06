@@ -1,5 +1,8 @@
 function globalReducer(state, action) {
     switch (action.type) {
+        case "SET_LOADED":
+            return { ...state, loaded: action.payload }
+        // ------------------------------------------------------------------------------------
         case "ACTIVATE_CURRENCY":
             let updatedCurrencies = state.currencies.map(curr => {
                 curr.active = curr.code == action.payload ? true : false
@@ -41,9 +44,9 @@ function globalReducer(state, action) {
         // ------------------------------------------------------------------------------------
         // --------------------- BASKET ITEM COUNT --------------------------------------------
         case "inc":
-            return { ...state,  basket: action.payload}
+            return { ...state, basket: action.payload }
         case "dec":
-            return { ...state, basket: action.payload}
+            return { ...state, basket: action.payload }
         // ------------------------------------------------------------------------------------
         // ------------------------------------------------------------------------------------
         default:
